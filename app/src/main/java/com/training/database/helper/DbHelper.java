@@ -94,16 +94,4 @@ public class DbHelper extends SQLiteOpenHelper {
         database.execSQL(updateQuery);
         database.close();
     }
-
-
-    public void createDB(SQLiteDatabase db) {
-        final String SQL_CREATE_MOVIE_TABLE = "CREATE TABLE " + TABLE_SQLite + " (" +
-                COLUMN_ID + " INTEGER PRIMARY KEY autoincrement, " +
-                COLUMN_NAME + " TEXT NOT NULL, " +
-                COLUMN_ADDRESS + " TEXT NOT NULL" +
-                " )";
-
-        db.execSQL(SQL_CREATE_MOVIE_TABLE);
-        db.close();
-    }
 }
